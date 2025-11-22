@@ -81,7 +81,7 @@ func (l *logger) With(args ...any) Logger {
 	event := zerolog.Dict()
 	l.handleArgs(event, args...)
 
-	nl = nl.Dict("additionalInfo", event)
+	nl = nl.Dict("additional_info", event)
 
 	zlog := nl.Logger()
 	return &logger{
